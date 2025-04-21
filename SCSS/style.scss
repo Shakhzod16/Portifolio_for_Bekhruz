@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+$primary-color: #3a6cf4;
+$dark-bg: #0a0a23;
+$white: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: $white;
+  background-color: $dark-bg;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  background: transparent;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  .logo {
+    font-weight: 600;
+    font-size: 24px;
+  }
+  .nav {
+    a {
+      color: $white;
+      margin-left: 20px;
+      text-decoration: none;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(/img/2017_Actress_Chloe_Grace_Moretz_black_and_white_photo_116057_.png) no-repeat center center / cover;
+  .container {
+    h2 {
+      font-size: 2.5rem;
+      span {
+        color: $primary-color;
+      }
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: $primary-color;
+      color: $white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: 0.3s;
+      &:hover {
+        background: darken($primary-color, 10%);
+      }
+    }
+  }
+}
+
+.about, .work {
+  padding: 80px 0;
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+}
+
+.projects {
+  display: grid;
+  gap: 20px;
+  .project-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 6px;
+    h4 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.02);
+}
