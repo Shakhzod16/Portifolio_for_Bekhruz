@@ -6,6 +6,7 @@
 		<title>Bekhruz | Portfolio</title>
 		<link rel="stylesheet" href="./SCSS/style.css" />
 		<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 	</head>
 	<body>
 		<header class="navbar-container">
@@ -13,7 +14,7 @@
 
 			<nav class="navbar">
 				<a href="#Home" class="nav-link">Home</a>
-				<a href="#" class="nav-link">Services</a>
+				<a href="#services" class="nav-link">Services</a>
 				<a href="#" class="nav-link">Resume</a>
 				<a href="#" class="nav-link">Work</a>
 				<a href="#" class="nav-link">Contact</a>
@@ -67,6 +68,121 @@
 				<p>Code commits</p>
 			</div>
 		</div>
+
+		<!-- Service -->
+
+		<section class="services" id="services">
+			<div class="container">
+				<div class="service-box">
+					<span class="service-number">01</span>
+					<div class="service-icon">
+						<div class="circle">
+							<span>&darr;</span>
+						</div>
+					</div>
+					<h3 class="service-title">Web Development</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et.</p>
+				</div>
+
+				<div class="service-box">
+					<span class="service-number">02</span>
+					<div class="service-icon">
+						<div class="circle">
+							<span>&darr;</span>
+						</div>
+					</div>
+					<h3 class="service-title">UI/UX Design</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et.</p>
+				</div>
+
+				<div class="service-box">
+					<span class="service-number">03</span>
+					<div class="service-icon">
+						<div class="circle">
+							<span>&darr;</span>
+						</div>
+					</div>
+					<h3 class="service-title">Logo Design</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et.</p>
+				</div>
+
+				<div class="service-box">
+					<span class="service-number">04</span>
+					<div class="service-icon">
+						<div class="circle">
+							<span>&darr;</span>
+						</div>
+					</div>
+					<h3 class="service-title">SEO</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Resume -->
+		<section class="resume" id="resume">
+			<div class="container">
+				<div class="resume-left">
+					<h2>Nega aynan men?</h2>
+					<p>Mobilograf sifatida tajribam va kreativ yondashuvim bilan sizga xizmat qilaman.</p>
+					<div class="tabs">
+						<button class="tab active" data-tab="experience">Tajriba</button>
+						<button class="tab" data-tab="education">Ta'lim</button>
+						<button class="tab" data-tab="skills">Ko‘nikmalar</button>
+						<button class="tab" data-tab="about">Men haqimda</button>
+					</div>
+				</div>
+
+				<div class="resume-right">
+					<!-- Tajriba -->
+					<div class="tab-content active" id="experience">
+						<div class="item">
+							<span>2023 - hozirgacha</span>
+							<h3>Frilans Mobilograf</h3>
+							<p>SMM, kontent, reklama videolari</p>
+						</div>
+						<div class="item">
+							<span>2022 - 2023</span>
+							<h3>Studio Operator</h3>
+							<p>Video va foto montaj, ijodiy rejissura</p>
+						</div>
+					</div>
+
+					<!-- Ta'lim -->
+					<div class="tab-content" id="education">
+						<div class="item">
+							<span>2021 - 2022</span>
+							<h3>Mobilografiya kursi</h3>
+							<p>Online Academy</p>
+						</div>
+						<div class="item">
+							<span>2019 - 2021</span>
+							<h3>Texnikum – Multimedia</h3>
+							<p>Media va Dizayn</p>
+						</div>
+					</div>
+
+					<!-- Ko'nikmalar -->
+					<div class="tab-content" id="skills">
+						<ul class="skills-list">
+							<li>Mobil video/foto suratga olish</li>
+							<li>CapCut, VN, InShot</li>
+							<li>SMM va kontent rejalashtirish</li>
+							<li>Yorug‘lik va burchak ishlari</li>
+							<li>Kreativ yondashuv</li>
+						</ul>
+					</div>
+
+					<!-- Men haqimda -->
+					<div class="tab-content" id="about">
+						<p>
+							Men mobilografman. Har bir kadrda syujet yaratishga harakat qilaman. Mening asosiy maqsadim — mijozning
+							g‘oyasini estetik va kreativ shaklda ifodalash.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<script src="app.js"></script>
 	</body>

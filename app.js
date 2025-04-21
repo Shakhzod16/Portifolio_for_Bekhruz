@@ -18,3 +18,30 @@ counters.forEach(counter => {
 
 	updateCount();
 });
+
+// service
+
+// Optional: icon hover animation (if needed)
+document.querySelectorAll('.circle').forEach(circle => {
+	circle.addEventListener('mouseenter', () => {
+		circle.style.transform = 'rotate(180deg)';
+	});
+	circle.addEventListener('mouseleave', () => {
+		circle.style.transform = 'rotate(0deg)';
+	});
+});
+
+// Resume
+
+const tabs = document.querySelectorAll('.tab');
+const contents = document.querySelectorAll('.tab-content');
+
+tabs.forEach(tab => {
+	tab.addEventListener('click', () => {
+		tabs.forEach(t => t.classList.remove('active'));
+		contents.forEach(c => c.classList.remove('active'));
+
+		tab.classList.add('active');
+		document.getElementById(tab.dataset.tab).classList.add('active');
+	});
+});

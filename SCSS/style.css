@@ -169,17 +169,17 @@ h1 span {
 
 .stats {
 	display: flex;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	margin-top: 4rem;
 	color: #fff;
 	text-align: center;
 	flex-wrap: wrap;
-	gap: 2rem;
+	/* gap: 30px; */
 }
 
 .stat {
 	flex: 1;
-	min-width: 120px;
+	min-width: 100px;
 }
 
 .stat h2 {
@@ -194,54 +194,52 @@ h1 span {
 
 /* Rasm atrofida aylanadigan chiziq */
 .image-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 350px;
-  aspect-ratio: 1 / 1;
-  margin: 0 auto;
+	position: relative;
+	width: 100%;
+	max-width: 350px;
+	aspect-ratio: 1 / 1;
+	margin: 0 auto;
 }
 
 .border-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 4px dashed #00ff99;
-  border-radius: 50%;
-  animation: rotate 5s linear infinite;
-  z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 4px dashed #00ff99;
+	border-radius: 50%;
+	animation: rotate 5s linear infinite;
+	z-index: 1;
 }
 .border-wrapper:hover {
-  transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 
 .profile-pic {
-  position: absolute;
-  top: 3%;
-  left: 3%;
-  width: 94%;
-  height: 94%;
-  border-radius: 50%;
-  overflow: hidden;
-  z-index: 2;
+	position: absolute;
+	top: 3%;
+	left: 3%;
+	width: 94%;
+	height: 94%;
+	border-radius: 50%;
+	overflow: hidden;
+	z-index: 2;
 }
 
 .profile-pic img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
 }
-
 
 /* Media Query for small screens */
 @media (max-width: 400px) {
-  .image-wrapper {
-    max-width: 280px;
-  }
+	.image-wrapper {
+		max-width: 280px;
+	}
 }
-
 
 /* 900px */
 @media (max-width: 900px) {
@@ -309,5 +307,268 @@ h1 span {
 
 	.stat p {
 		font-size: 0.85rem;
+	}
+}
+
+/* Service */
+
+.services {
+	padding: 80px 20px;
+}
+
+.container {
+	max-width: 1100px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 40px;
+}
+
+.service-box {
+	background-color: transparent;
+	border-radius: 12px;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
+	transition: all 0.3s ease;
+}
+
+.service-number {
+	font-size: 20px;
+	color: #6c6c6c;
+	margin-bottom: 20px;
+	display: inline-block;
+	transition: color 0.3s;
+}
+
+.service-title {
+	font-size: 22px;
+	font-weight: 700;
+	color: #ffffff;
+	margin: 10px 0;
+	transition: color 0.3s;
+}
+
+.service-box p {
+	font-size: 14px;
+	line-height: 1.7;
+	color: #888;
+	margin-top: 10px;
+}
+
+.service-icon {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.circle {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.circle span {
+	font-size: 18px;
+	transform: rotate(90deg);
+	transition: color 0.3s;
+}
+
+/* HOVER EFFECT */
+.service-box:hover .service-number,
+.service-box:hover .service-title,
+.service-box:hover .circle,
+.service-box:hover .circle span {
+	color: #00ffae;
+}
+.circle:hover {
+	background-color: #00ffae;
+}
+
+.service-box:hover .circle span {
+	color: #0f0f11;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+	.container {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+}
+
+/* Resume */
+
+.resume {
+	padding: 80px 20px;
+}
+
+.container {
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 60px;
+}
+
+.resume-left {
+	flex: 1;
+	min-width: 260px;
+}
+
+.resume-left h2 {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.resume-left p {
+	color: #999;
+	margin-bottom: 30px;
+	font-size: 14px;
+}
+
+.tabs {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.tab {
+	background: #1b1b1f;
+	border: none;
+	padding: 12px 20px;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+	text-align: left;
+}
+
+.tab.active {
+	background-color: #00ffae;
+	color: #0f0f11;
+	font-weight: bold;
+}
+
+.resume-right {
+	flex: 2;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 25px;
+}
+
+.tab-content {
+	display: none;
+	grid-column: span 2;
+	animation: fade 0.3s ease-in-out;
+}
+
+.tab-content.active {
+	display: grid;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+		transform: translateY(15px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.item {
+	background-color: #1a1a1d;
+	padding: 20px;
+	border-left: 3px solid #00ffae;
+	border-radius: 6px;
+	transition: transform 0.3s ease;
+}
+
+.item:hover {
+	transform: translateY(-5px);
+}
+
+.item span {
+	font-size: 14px;
+	color: #00ffae;
+}
+
+.item h3 {
+	font-size: 18px;
+	margin-top: 10px;
+	color: #fff;
+}
+
+.item p {
+	color: #aaa;
+	font-size: 14px;
+}
+
+.skills-list {
+	list-style: none;
+	padding-left: 20px;
+}
+
+.skills-list li {
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.skills-list li::before {
+	content: '•';
+	position: absolute;
+	left: -15px;
+	color: #00ffae;
+}
+
+/* ✅ Responsive Breakpoints */
+@media (max-width: 900px) {
+	.container {
+		flex-direction: column;
+		gap: 40px;
+	}
+	.resume-right {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 600px) {
+	.tab {
+		font-size: 14px;
+		padding: 10px 16px;
+	}
+	.item h3 {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 440px) {
+	.resume-left h2 {
+		font-size: 24px;
+	}
+	.resume-left p {
+		font-size: 13px;
+	}
+	.tab {
+		font-size: 13px;
+	}
+	.item {
+		padding: 16px;
+	}
+	.item span {
+		font-size: 13px;
+	}
+	.item h3 {
+		font-size: 15px;
 	}
 }
